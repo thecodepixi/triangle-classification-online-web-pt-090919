@@ -14,11 +14,7 @@ class Triangle
   def kind 
     # triangles with sides that are 0 or negative are invalid 
     if @side_a <= 0 || @side_b <= 0 || @side_c <= 0 
-      begin 
         raise TriangleError 
-      rescue TriangleError => error 
-        puts error.message 
-      end 
     elsif @side_a == @side_b && @side_b == @side_c 
       return :equilateral 
     elsif @side_a == @side_b || @side_a == @side_c || @side_b == @side_c 
